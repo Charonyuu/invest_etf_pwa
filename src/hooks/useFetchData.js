@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { INVEST_ETF_WORTHS_BASE_URL} from '../constant/constant';
 export default function useFetchData(){
 
     const [data,setData] = useState();
@@ -11,7 +12,7 @@ export default function useFetchData(){
         return day > 0 && day < 6 && time >=9 && time <=16;
     }
     const FetchData = (async()=>{
-        await axios.get('/api')
+        await axios.get(INVEST_ETF_WORTHS_BASE_URL)
         .then((response)=>{
             setData(response.data);
             setLoading(false)
