@@ -1,2 +1,7 @@
 [build]
   functions="my_functions"
+
+[[redirects]]
+  from = "/api"
+  to = "/.netlify/functions/getApi"
+  status = 200
