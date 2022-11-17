@@ -6,7 +6,7 @@ import DataCard from './component/dataCard';
 import DataTable from './component/datatable';
 import Nav from './component/nav';
 
-import { STOCK_COMPANY_ARRAY } from './constant/api';
+import { STOCK_COMPANY_ARRAY } from './constant/constant';
 import {ReactComponent as UpIcon} from './asset/up_icon.svg'
 import {ReactComponent as Loading} from './asset/loading.svg'
 
@@ -18,7 +18,6 @@ function App() {
   const [toggleList ,setToggleList] = useState([
     false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,
   ])
-
   const toogleMenu = (index) =>{
     const temp = [...toggleList]
     temp[index] = !temp[index]
