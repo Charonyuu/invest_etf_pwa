@@ -24,4 +24,4 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
-/my_functions
+my_functions
