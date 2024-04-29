@@ -18,5 +18,5 @@ app.get("/api", async (req, res) => {
 });
 
 app.listen(8080, () => {
-  console.log("server listening on 8010...");
+  console.log("server listening on 8080...");
 });
