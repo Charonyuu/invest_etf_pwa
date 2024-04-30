@@ -1,1 +1,18 @@
-ETF Net Worth PWA is a Progressive Web App that provides a convenient way to check the net worth of ETFs on the Taiwan Stock Exchange. It integrates with an API to quickly search for the desired ETFs and allows users to store their favorites using localStorage for easy access. The app is deployed on Netlify.
+# 台股 ETF 淨值查詢網站
+
+這是一個用於查看台股 ETF 淨值的簡易網站，實現了 ETF 價格的即時更新與顯示。
+
+## 功能
+
+- **即時更新：** 顯示台股 ETF 的最新交易價格與淨值估算。
+- **收藏功能：** 使用者可以透過點擊星號來收藏喜愛的 ETF，方便日後追蹤。
+- **響應式設計：** 界面支持各種屏幕尺寸，確保在手機和平板上也能良好顯示。
+
+## 使用技術
+
+- **React** - 前端框架。
+- **react-window** - 提高長列表的渲染效能。
+- **Context API** - 管理全局狀態。
+- **Hooks** - 處理邏輯和狀態。
+- **Express** - 本地測試api。
+- **Netlify** - 部署網站與severless api。
