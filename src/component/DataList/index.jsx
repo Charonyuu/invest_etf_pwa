@@ -15,15 +15,18 @@ export default function DataList() {
         const latestTime = formatDate(item.i, item.j);
         const overPrice = item.g > 0; //超過淨值
         return (
-          <article className="rounded-lg border-b border-gray-100 bg-white py-4">
+          <article
+            className="rounded-lg border-b border-gray-100 bg-white py-4"
+            key={item.a}
+          >
             <div>
               <p className="text-sm text-gray-500 truncate flex items-center">
-                <div
+                <button
                   onClick={() => handleClickStar(item.a)}
                   className="cursor-pointer text-yellow-400 flex-shrink-0 mb-0.5 mr-1"
                 >
                   {storedStock.includes(item.a) ? <FaStar /> : <FaRegStar />}
-                </div>
+                </button>
                 {item.a}
                 {item.b}
               </p>

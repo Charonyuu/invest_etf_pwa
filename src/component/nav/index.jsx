@@ -13,9 +13,8 @@ export default function Nav() {
   return (
     <div className="my-2 flex items-center justify-between">
       <Search />
-
       <div className="flex items-center ml-2 space-x-2">
-        <div
+        <button
           className={cn(
             "border border-gray-300 text-yellow-300 w-8 h-8 flex justify-center items-center rounded-md cursor-pointer shadow-sm"
           )}
@@ -28,23 +27,23 @@ export default function Nav() {
           ) : (
             <AiOutlineSwap className="text-black" />
           )}
-        </div>
-        <div
+        </button>
+        <button
           className={cn(
             "border border-gray-300 text-yellow-300 w-8 h-8 flex justify-center items-center rounded-md cursor-pointer shadow-sm"
           )}
           onClick={handleToggleStar}
         >
           {star ? <FaStar /> : <FaRegStar />}
-        </div>
-        <div
+        </button>
+        <button
           className={cn(
             "border border-gray-300  w-8 h-8 flex justify-center items-center rounded-md cursor-pointer shadow-sm"
           )}
           onClick={refetch}
         >
           <IoMdRefresh className={isFetching && "animate-spin"} />
-        </div>
+        </button>
       </div>
       {/* 
       <div className={styles.btn_group}>
