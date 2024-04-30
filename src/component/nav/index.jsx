@@ -15,6 +15,7 @@ export default function Nav() {
       <Search />
       <div className="flex items-center ml-2 space-x-2">
         <button
+          aria-label="toggleSort"
           className={cn(
             "border border-gray-300 text-yellow-300 w-8 h-8 flex justify-center items-center rounded-md cursor-pointer shadow-sm"
           )}
@@ -29,6 +30,7 @@ export default function Nav() {
           )}
         </button>
         <button
+          aria-label="toggleStar"
           className={cn(
             "border border-gray-300 text-yellow-300 w-8 h-8 flex justify-center items-center rounded-md cursor-pointer shadow-sm"
           )}
@@ -37,6 +39,7 @@ export default function Nav() {
           {star ? <FaStar /> : <FaRegStar />}
         </button>
         <button
+          aria-label="refetch"
           className={cn(
             "border border-gray-300  w-8 h-8 flex justify-center items-center rounded-md cursor-pointer shadow-sm"
           )}
@@ -45,37 +48,6 @@ export default function Nav() {
           <IoMdRefresh className={isFetching && "animate-spin"} />
         </button>
       </div>
-      {/* 
-      <div className={styles.btn_group}>
-        <div
-          onClick={() => option_handler("favorite")}
-          className={classnames(styles.icon, {
-            [styles.be_chosen]: option === "favorite",
-          })}
-        >
-          <HeartIcon />
-        </div>
-        <div
-          onClick={() => option_handler("percent")}
-          className={classnames(styles.icon, {
-            [styles.be_chosen]: option === "percent",
-          })}
-        >
-          1%
-        </div>
-        <div
-          onClick={() => toggle_handler()}
-          className={classnames(styles.icon, { [styles.down]: allToggle })}
-        >
-          <UpIcon />
-        </div>
-        <div onClick={refresh_hanlder} className={styles.icon}>
-          <RefreshIcon
-            className={isRefresh ? styles.refreshing : null}
-            onAnimationEnd={() => setIsRefresh(false)}
-          />
-        </div>
-      </div> */}
     </div>
   );
 }
